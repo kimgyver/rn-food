@@ -13,7 +13,7 @@ const SearchScreen = () => {
         return results.filter(result => result.price === price);
     }
 
-    return <View style={{ flex: 1 }}>
+    return <>
         <SearchBar 
             term={term} 
             onTermChanged={setTerm} 
@@ -26,7 +26,7 @@ const SearchScreen = () => {
             <ResultsList results={filterResultsByPrice('$$')} title="Bit Pricier"/>
             <ResultsList results={filterResultsByPrice('$$$')} title="Big Spender"/>
         </ScrollView>
-    </View>
+    </>
 }
 
 const styles = StyleSheet.create({});
